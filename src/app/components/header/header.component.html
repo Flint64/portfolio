@@ -1,0 +1,33 @@
+<header #header>
+  <!-- Display header on left side of screen for larger screens -->
+  <div *ngIf="showHeaderDetails">
+    <img src="../../../assets/profile.jpg" alt="" />
+    <p>
+      My name is Travis Aucoin, and I'm a web developer. I currently work for
+      Brigham Young University Idaho's Disability Services department as the
+      lead developer on their ticket management system. I am currently enrolled
+      for my final semester, and am excited to gain even more experience working
+      on new projects out in the industry
+    </p>
+    <nav>
+      <!-- <button [routerLink]="'about'">About</button> -->
+      <button [routerLink]="''">Home</button>
+      <button [routerLink]="'contact'">Contact</button>
+    </nav>
+  </div>
+
+  <!-- Smaller screens switch to top header with less clutter -->
+  <div *ngIf="!showHeaderDetails">
+    <div>
+      <button id="hamButton">
+        <img id="hamburger" (click)="toggleMenu()" src="../../../assets/hamburger_menu2.png" alt="">
+      </button>
+    </div>
+    <div class="headerLinks" #headerLinks>
+      <a (click)="toggleMenu()" [routerLink]="''">Home</a>
+      <!-- <a (click)="toggleMenu()" [routerLink]="'about'">About</a> -->
+      <a (click)="toggleMenu()" [routerLink]="'contact'">Contact</a>
+    </div>
+  </div>
+
+</header>

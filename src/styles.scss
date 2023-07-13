@@ -1,1 +1,77 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Anek+Tamil&family=Quantico&display=swap');
+// font-family: 'Anek Tamil', sans-serif;
+// font-family: 'Quantico', sans-serif;
+
+
+
+body {
+  margin: 0;
+  background-color: rgb(233, 233, 233);
+  min-height: calc(100% - 30px);
+}
+
+app-root {
+  min-height: calc(100vh - 30px) !important;
+  // display: inline;
+}
+
+button{
+  width: 70px;
+  height: 25px;
+  border: none;
+  color: black;
+  background-color: rgb(255, 140, 251);
+  &:hover{
+    background-color: rgb(237, 65, 237);
+    color: white;
+  }
+  &:disabled{
+    background-color: grey;
+    &:hover{
+      color: black;
+    }
+  }
+}
+
+a{
+  color: rgb(255, 45, 150);
+}
+
+app-home, app-contact, app-about{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+  input.ng-dirty.ng-invalid {
+    outline: none !important;
+    border: none;
+    border-left: 3px ridge red !important;
+  }
+
+  textarea.ng-dirty.ng-invalid {
+    outline: none !important;
+    border: none;
+    border-left: 3px ridge red !important;
+  }
+
+@media (min-width: 600px) {
+  //Flex the app-root to allow the "header" to appear as a sidebar
+  app-root {
+    display: flex;
+  }
+
+  app-home, app-contact, app-about, app-project {
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    align-items: flex-start;
+    padding-left: 20px;
+  }
+  
+}

@@ -1,0 +1,37 @@
+<div class="wrapper">
+
+  <section>
+    <h2>About:</h2>
+    <p>
+      Hi! My name is Travis Aucoin! I graduated from Brigham Young University-Idaho in 2023
+      with a bachelors degree in Web Design & Development. I've worked for the university's
+      accessibility department as a full stack developer and specalize in Angular building 
+      single page applications.
+    </p>
+  </section>
+
+  <section>
+    <h2>Contact me:</h2>
+    <p>For any inquiries about my previous work, or if you or someone you know needs a website, don't hesitate to reach out!</p>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit($event)">
+      <label for="firstname">First Name <span class="red">*</span></label>
+      <input type="text" id="firstname" formControlName="firstname" (keyup)="changeFirst($event.target)"/>
+    
+      <label for="lastname">Last Name <span class="red">*</span></label>
+      <input type="text" id="lastname" formControlName="lastname" (keyup)="changeLast($event.target)"/>
+    
+      <input type="text" formControlName="user_name" id="user_name" name="user_name" class="none">
+    
+      <label for="email">Email <span class="red">*</span></label>
+      <input id="email" name="user_email" formControlName="email" type="email"/>
+    
+      <label for="subject">Subject <span class="red">*</span></label>
+      <input type="text" id="subject" name="subject" formControlName="subject" />
+    
+      <label for="message">Message <span class="red">*</span></label>
+      <textarea name="message" id="" cols="30" rows="8" formControlName="message"></textarea>
+    
+      <button type="submit" [disabled]="!contactForm.valid">Submit</button>
+    </form>
+  </section>
+</div>

@@ -1,0 +1,102 @@
+.projectWrapper {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  border-bottom: 1px solid black;
+  .projectLinks {
+    padding-bottom: none;
+    padding-bottom: 15px;
+    margin-top: -8px;
+    a {
+      &:hover {
+        color: rgb(255, 175, 225);
+      }
+      // &:visited {
+      //   color: rgb(169, 0, 104);
+      // }
+    }
+  }
+  
+  &:last-of-type {
+    .projectLinks {
+      border-bottom: none;
+    }
+  }
+}
+
+a {
+  padding-right: 15px;
+}
+
+a[target="_blank"]:after {
+  // content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+  content: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ij48cGF0aCBkPSJNOSAyTDkgMyAxMi4zIDMgNiA5LjMgNi43IDEwIDEzIDMuNyAxMyA3IDE0IDcgMTQgMlpNNCA0QzIuOSA0IDIgNC45IDIgNkwyIDEyQzIgMTMuMSAyLjkgMTQgNCAxNEwxMCAxNEMxMS4xIDE0IDEyIDEzLjEgMTIgMTJMMTIgNyAxMSA4IDExIDEyQzExIDEyLjYgMTAuNiAxMyAxMCAxM0w0IDEzQzMuNCAxMyAzIDEyLjYgMyAxMkwzIDZDMyA1LjQgMy40IDUgNCA1TDggNSA5IDRaIi8+PC9zdmc+);
+  margin: 0 3px 0 5px;
+  filter: invert(39%) sepia(41%) saturate(7500%) hue-rotate(311deg) brightness(100%) contrast(103%);
+}
+
+.inTextLink{
+  padding-right: 0;
+}
+
+// Styles for the JS to add to manipulate the projects
+.hidden{
+  visibility: hidden;
+}
+
+.none{
+  display: none;
+}
+
+.overflow{
+  overflow-y: scroll !important;
+}
+//////////////////////////////////////////////////////
+
+@media (min-width: 600px) {
+  .projectWrapper {
+    transition:height .7s ease-out !important;
+    h2{
+      margin: 0;
+      margin-top: 10px;
+    }
+    
+    // height: 175px;
+    p {
+      overflow: hidden;
+      margin-bottom: 0;
+      a{
+        padding-right: 0;
+        margin-right: -7px;
+      }
+    }
+
+    .expandButtonDiv{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      // justify-content: flex-end;
+    }
+    
+    .projectLinks {
+      margin-top: 10px;
+      a {
+        &:hover {
+          color: rgb(255, 175, 225);
+        }
+      }
+    }
+
+    &:last-of-type {
+      .projectLinks {
+        border-bottom: none;
+      }
+    }
+    
+  }
+
+  a {
+    padding-right: 15px;
+  }
+}
